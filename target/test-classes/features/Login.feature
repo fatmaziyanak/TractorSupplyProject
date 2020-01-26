@@ -1,3 +1,4 @@
+@sprint1 @login
 Feature: Login
 
 @smoke
