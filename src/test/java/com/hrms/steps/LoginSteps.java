@@ -33,7 +33,7 @@ public class LoginSteps extends CommonMethods{
 
 	@Then("I successfully logged in")
 	public void i_successfully_logged_in() {
-	    System.out.println("I am logged in");
+	    
 	}
 	
 	@When("I enter valid username and invalid password")

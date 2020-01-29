@@ -7,9 +7,12 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="src/test/resources/features/Login.feature"
+		features="src/test/resources/features"
 		,glue="com/hrms/steps"
-		,dryRun=false
+		,dryRun=true
+		,plugin="pretty"
+		,monochrome=true
+		//,tags= {"@smoke"}
 		)
 
 public class RunnerClass {
