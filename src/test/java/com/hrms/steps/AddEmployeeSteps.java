@@ -8,11 +8,10 @@ import com.hrms.pages.LoginPageElements;
 import com.hrms.pages.PersonalDetailsPageElements;
 import com.hrms.utils.CommonMethods;
 import com.hrms.utils.ConfigsReader;
-import com.hrms.utils.Constants;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 
 public class AddEmployeeSteps extends CommonMethods{
@@ -33,12 +32,12 @@ public class AddEmployeeSteps extends CommonMethods{
 		dashboard.navigateToAddEmployee();
 	}
 
-	@When("I add firstName, middleName and last name")
-	public void i_add_firstName_middleName_and_last_name() {
+	@When("I add {string}, {string} and {string}")
+	public void i_add_and_(String fName, String mName, String lName) {
 		addEmp=new AddEmployeePageElements();
-		sendText(addEmp.firstName, "John");
-		sendText(addEmp.middleName, "J");
-		sendText(addEmp.lastName, "Smith");
+		sendText(addEmp.firstName, fName);
+		sendText(addEmp.middleName, mName);
+		sendText(addEmp.lastName, lName);
 		empId=addEmp.empId.getText();
 	}
 
