@@ -9,10 +9,10 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features="src/test/resources/features"
 		,glue="com/hrms/steps"
-		,dryRun=false
+		,dryRun=true
 		,plugin= {"pretty", "html:target/html/cucumber-default-report"}
 		,monochrome=true
-		,tags= {"@smoke"}
+		//,tags= {"@smoke"}
 		)
 
 public class RunnerClass {
