@@ -17,6 +17,7 @@ Feature: Login
     Then I see error message
     And I close browser
 
+  @regression
   Scenario Outline: Invalid Login and message validation
     When I enter "<Username>" and "<Password>"
     And I click on login button
