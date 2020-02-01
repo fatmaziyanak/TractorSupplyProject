@@ -83,9 +83,27 @@ public class AddEmployeeSteps extends CommonMethods {
 	}
 	
 	@Then("I am able to modify Employee Details")
-	public void modifyEmployeeDetails(DataTable modifyEmpDetail) {
+	public void modifyEmployeeDetails(DataTable modifyEmpDetail) throws InterruptedException {
 		List<Map<String, String>> modifyList=modifyEmpDetail.asMaps();
 		
-		
+		for(Map<String, String> map: modifyList) {
+			//click o edit
+			click(pdetails.edit_saveBtn);
+			
+			//passing new details to the employee
+			sendText(pdetails.licenNo, map.get("DriverLisence"));
+			sendText(pdetails.licExpDate, map.get("ExpirationDate"));
+			sendText(pdetails.SSN, map.get("SSN"));
+			sendText(pdetails.SIN, map.get("SIN"));
+			clickRadio(pdetails.genderLabels, map.get("Gender"));
+			Thread.sleep(5000);
+			
+			selectDdValue(pdetails.maritalStatus, map.get("MaritalStatus"));
+			selectDdValue(pdetails.nationality, map.get("Nationality"));
+			sendText(pdetails.DOB, map.get("DOB"));
+			
+			//click on save
+			click(pdetails.edit_saveBtn);
+		}
 	}
 }
