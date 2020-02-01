@@ -79,7 +79,7 @@ public class AddEmployeeSteps extends CommonMethods {
 		List<Map<String, String>> modifyList=modifyEmpDetail.asMaps();
 		
 		for(Map<String, String> map: modifyList) {
-			//click o edit
+			//click on edit
 			click(pdetails.edit_saveBtn);
 			
 			//passing new details to the employee
