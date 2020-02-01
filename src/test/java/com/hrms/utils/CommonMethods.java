@@ -19,10 +19,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.hrms.testbase.BaseClass;
+import com.hrms.testbase.PageInitiliazer;
 
 //command+o--> for mac to see all methods within the class
 //ctrl+o--> for windows
-public class CommonMethods extends BaseClass {
+public class CommonMethods extends PageInitiliazer {
 
 	/**
 	 * This method will accept the alert

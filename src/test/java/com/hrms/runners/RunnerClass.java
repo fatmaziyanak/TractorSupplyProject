@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 		,dryRun=false
 		,plugin= {"pretty", "html:target/html/cucumber-default-report"}
 		,monochrome=true
-		,tags= {"@inProgress"}
+		,tags= {"@temp"}
 		)
 
 public class RunnerClass {

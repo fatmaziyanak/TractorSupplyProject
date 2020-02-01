@@ -18,19 +18,11 @@ import cucumber.api.java.en.When;
 import io.cucumber.datatable.DataTable;
 
 public class AddEmployeeSteps extends CommonMethods {
-
-	LoginPageElements login;
-	AddEmployeePageElements addEmp;
+	
 	String empId;
-	DashboardPageElements dashboard;
-	PersonalDetailsPageElements pdetails;
 
 	@Given("I am logged into HRMS")
 	public void i_am_logged_into_HRMS() {
-		login = new LoginPageElements();
-		dashboard = new DashboardPageElements();
-		addEmp = new AddEmployeePageElements();
-		pdetails = new PersonalDetailsPageElements();
 		
 		login.login(ConfigsReader.getProperty("username"), ConfigsReader.getProperty("password"));
 	}
