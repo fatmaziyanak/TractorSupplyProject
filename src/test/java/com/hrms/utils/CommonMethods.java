@@ -162,9 +162,10 @@ public class CommonMethods extends PageInitiliazer {
 	public static byte[] takeScreenshot(String fileName) {
 
 		TakesScreenshot ts = (TakesScreenshot)driver;
-		
+		//create picture in a form of bytes --> we need it to attach it to our scenario
 		byte[]picture=ts.getScreenshotAs(OutputType.BYTES);
 	
+		//taking a picture in a form of file and store it in the specified location
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MMdd_HHmmss");
 		String timeStamp = sdf.format(date.getTime());
