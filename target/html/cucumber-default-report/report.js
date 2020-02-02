@@ -150,8 +150,10 @@ formatter.match({
   "location": "LoginSteps.i_successfully_logged_in()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:86)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertTrue(Assert.java:52)\n\tat com.hrms.steps.LoginSteps.i_successfully_logged_in(LoginSteps.java:32)\n\tat ✽.I successfully logged in(file:src/test/resources/features/Login.feature:8)\n",
+  "status": "failed"
 });
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
   "status": "passed"
 });
