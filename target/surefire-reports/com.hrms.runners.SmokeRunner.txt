@@ -1,7 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: com.hrms.runners.SmokeRunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 20.192 s <<< FAILURE! - in com.hrms.runners.SmokeRunner
-Login.Valid login  Time elapsed: 6.806 s  <<< FAILURE!
-java.lang.AssertionError
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 101.683 s <<< FAILURE! - in com.hrms.runners.SmokeRunner
+Add Employee.Add new Employee  Time elapsed: 86.999 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#personal_txtEmployeeId"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Sumairs-MacBook-Pro.local', ip: 'fe80:0:0:0:1496:bc35:a728:55be%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.5', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/0v/qdsl9m8n5cl...}, goog:chromeOptions: {debuggerAddress: localhost:49246}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f91bd9bc0811fba0f4718bcbeef1f517
+*** Element info: {Using=id, value=personal_txtEmployeeId}
 

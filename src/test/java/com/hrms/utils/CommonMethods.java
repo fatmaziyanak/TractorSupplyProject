@@ -161,14 +161,14 @@ public class CommonMethods extends PageInitiliazer {
 	 */
 	public static byte[] takeScreenshot(String fileName) {
 
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		
+		byte[]picture=ts.getScreenshotAs(OutputType.BYTES);
+	
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MMdd_HHmmss");
 		String timeStamp = sdf.format(date.getTime());
 
-		TakesScreenshot ts = (TakesScreenshot)driver;
-		
-		byte[]picture=ts.getScreenshotAs(OutputType.BYTES);
-		
 		File file = ts.getScreenshotAs(OutputType.FILE);
 		String scrshotFile = Constants.SCREENSHOTS_FILEPATH + fileName + timeStamp + ".png";
 

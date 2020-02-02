@@ -21,8 +21,10 @@ public class Hooks extends CommonMethods{
 		if(scenario.isFailed()) {
 			byte[] picture=takeScreenshot("/failed/"+scenario.getName());
 			scenario.embed(picture, "image/png");
+		}else {
+			byte[] picture=takeScreenshot("/passed/"+scenario.getName());
+			scenario.embed(picture, "image/png");
 		}
-		
 		tearDown();
 	}
 }
