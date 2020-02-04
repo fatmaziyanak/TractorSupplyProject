@@ -25,7 +25,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "AddEmployeeSteps.i_am_logged_into_HRMS()"
+  "location": "ReportPageSteps.i_am_logged_into_HRMS()"
 });
 formatter.result({
   "status": "passed"
@@ -61,7 +61,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "AddEmployeeSteps.i_add_and_(String,String,String)"
+  "location": "AddEmployeeSteps.i_add_and(String,String,String)"
 });
 formatter.result({
   "status": "passed"
@@ -84,8 +84,7 @@ formatter.match({
   "location": "AddEmployeeSteps.i_see_Employee_has_been_succesfully_added()"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#personal_txtEmployeeId\"}\n  (Session info: chrome\u003d79.0.3945.130)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Sumairs-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:1496:bc35:a728:55be%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.14.5\u0027, java.version: \u00271.8.0_201\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/0v/qdsl9m8n5cl...}, goog:chromeOptions: {debuggerAddress: localhost:50515}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 6cee980f1e83a772bcf44b062d14c7c7\n*** Element info: {Using\u003did, value\u003dpersonal_txtEmployeeId}\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy16.getText(Unknown Source)\n\tat com.hrms.steps.AddEmployeeSteps.i_see_Employee_has_been_succesfully_added(AddEmployeeSteps.java:52)\n\tat ✽.I see Employee has been succesfully added(file:src/test/resources/features/AddEmployee.feature:13)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.embedding("image/png", "embedded0.png");
 formatter.after({
@@ -106,7 +105,7 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "Valid login",
+  "name": "Valid  login",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -129,7 +128,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "LoginSteps.i_enter_valid_username_and_valid_password()"
+  "location": "LoginSteps.i_enter_valid_usename_and_valid_password()"
 });
 formatter.result({
   "status": "passed"
@@ -145,17 +144,283 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I successfully logged in",
+  "name": "I succesfully logged in",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginSteps.i_successfully_logged_in()"
+  "location": "LoginSteps.i_succesfully_logged_in()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:86)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertTrue(Assert.java:52)\n\tat com.hrms.steps.LoginSteps.i_successfully_logged_in(LoginSteps.java:32)\n\tat ✽.I successfully logged in(file:src/test/resources/features/Login.feature:8)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.embedding("image/png", "embedded1.png");
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Invalid Login",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@sprint1"
+    },
+    {
+      "name": "@login"
+    },
+    {
+      "name": "@smoke"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I enter valid username and invalid password",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "LoginSteps.i_enter_valid_username_and_invalid_password()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "LoginSteps.i_click_on_login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I see error message",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginSteps.i_see_error_message()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded2.png");
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:src/test/resources/features/Report.feature");
+formatter.feature({
+  "name": "Report",
+  "description": "",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@sprint3"
+    },
+    {
+      "name": "@addreport"
+    }
+  ]
+});
+formatter.scenarioOutline({
+  "name": "Search for invalid report",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@smoke"
+    }
+  ]
+});
+formatter.step({
+  "name": "I enter invalid \"\u003creportName\u003e\" report",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "I click search button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "I see \"No Records Found\" message",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "reportName"
+      ]
+    },
+    {
+      "cells": [
+        "Regression"
+      ]
+    },
+    {
+      "cells": [
+        "Smoke"
+      ]
+    }
+  ]
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I am logged into HRMS",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ReportPageSteps.i_am_logged_into_HRMS()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I navigated to the Reports Page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportPageSteps.i_navigated_to_the_Reports_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Search for invalid report",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@sprint3"
+    },
+    {
+      "name": "@addreport"
+    },
+    {
+      "name": "@smoke"
+    }
+  ]
+});
+formatter.step({
+  "name": "I enter invalid \"Regression\" report",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "ReportPageSteps.i_enter_invalid_report(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click search button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportPageSteps.i_click_search_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I see \"No Records Found\" message",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "ReportPageSteps.i_see_message(String)"
+});
+formatter.result({
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat com.hrms.steps.ReportPageSteps.i_see_message(ReportPageSteps.java:47)\r\n\tat ✽.I see \"No Records Found\" message(file:src/test/resources/features/Report.feature:12)\r\n",
+  "status": "failed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I am logged into HRMS",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "ReportPageSteps.i_am_logged_into_HRMS()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I navigated to the Reports Page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportPageSteps.i_navigated_to_the_Reports_Page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Search for invalid report",
+  "description": "",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "name": "@sprint3"
+    },
+    {
+      "name": "@addreport"
+    },
+    {
+      "name": "@smoke"
+    }
+  ]
+});
+formatter.step({
+  "name": "I enter invalid \"Smoke\" report",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "ReportPageSteps.i_enter_invalid_report(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click search button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ReportPageSteps.i_click_search_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I see \"No Records Found\" message",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "ReportPageSteps.i_see_message(String)"
+});
+formatter.result({
+  "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:86)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertTrue(Assert.java:52)\r\n\tat com.hrms.steps.ReportPageSteps.i_see_message(ReportPageSteps.java:47)\r\n\tat ✽.I see \"No Records Found\" message(file:src/test/resources/features/Report.feature:12)\r\n",
+  "status": "failed"
+});
 formatter.after({
   "status": "passed"
 });
