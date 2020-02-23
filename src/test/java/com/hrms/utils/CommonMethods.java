@@ -2,6 +2,8 @@ package com.hrms.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -361,6 +363,20 @@ public class CommonMethods extends PageInitializeAll {
 	         }catch(Exception e){
 	             System.out.println("Value could not be found within the dropdown options.");
 	         }
+	     }
+	     
+	     static String jsonFile;
+	     public static String readJson(String fileName) {
+	    	 try {
+	    		 
+	    		 jsonFile = new String(Files.readAllBytes(Paths.get(fileName)));
+	    		 
+	    	 } catch(IOException e) {
+	    		 
+	    		 e.printStackTrace();
+	    	 }
+	    	 return jsonFile;
+	    	 
 	     }
 
 }
