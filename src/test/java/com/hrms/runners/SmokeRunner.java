@@ -10,10 +10,7 @@ import cucumber.api.junit.Cucumber;
 		features="src/test/resources/features"
 		,glue="com/hrms/steps"
 		,dryRun=false
-		,plugin= {"pretty"
-				, "html:target/html/cucumber-default-report"
-				, "json:target/cucumber.json"
-				, "rerun:target/failed.txt"}
+		,plugin= {"pretty", "html:target/html/cucumber-default-report", "json:target/cucumber.json"}
 		,monochrome=true
 		,tags= {"@smoke"}
 		)
