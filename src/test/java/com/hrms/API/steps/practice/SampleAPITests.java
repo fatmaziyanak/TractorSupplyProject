@@ -10,6 +10,11 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class SampleAPITests {
+	
+	/**
+	 * Below are hard coded examples using REST assured
+	 * 
+	 */
 
 	// @Test
 	public void getAllJobTitles() {
@@ -59,15 +64,14 @@ public class SampleAPITests {
 		Response response = RestAssured.given().urlEncodingEnabled(true).header("Authorization",
 				"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODI0NzI4MTksImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTU4MjU4ODAxOSwidXNlcklkIjoiOTUifQ.7A0ZdFAfztoLO9qE-ohb_IFB3OsU6o-HsEn1-25jfOQ")
 
-				.body("{\n  \"emp_firstname\": \"Suley1maqnNew\",\n   \"emp_lastname\": \"OZA1Y\",\n    \"emp_middle_name\": \"Senior\\\",\n    \"emp_gender\": \"2\",\n    \"emp_birthday\": \"1974-02-19\",\n    \"emp_status\": \"Worker\",\n    \"emp_job_title\": \"Cloud Consultant\"\n}\"")
-//		.param("emp_firstname", "newName")
-//		.param("emp_lastname", "employee")
-//		.param("emp_middle_name", "syntax")
-//		.param("emp_gender", "2")
-//		.param("emp_birthday", "1991-04-22")
-//		.param("emp_status", "Employee")
-//		.param("emp_job_title", "Developer")
-//		.contentType("application/json")
+		.param("emp_firstname", "newName")
+		.param("emp_lastname", "employee")
+		.param("emp_middle_name", "syntax")
+		.param("emp_gender", "2")
+		.param("emp_birthday", "1991-04-22")
+		.param("emp_status", "Employee")
+		.param("emp_job_title", "Developer")
+		.contentType("application/json")
 				.when().post("http://18.232.148.34/syntaxapi/api/createEmployee.php");
 
 		response.prettyPrint();
