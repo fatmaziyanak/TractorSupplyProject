@@ -6,6 +6,7 @@ import cucumber.api.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.equalTo;
 
 import com.hrms.utils.APIConstants;
 import com.hrms.utils.CommonMethods;
@@ -42,7 +43,18 @@ public class POSTCreateEmployeeAPI {
 
 	@Then("user validates employee was created")
 	public void user_validates_employee_was_created() {
-		// Write code here that turns the phrase above into concrete actions
+
+	response.then().body("Message", equalTo("Entry Created"));
+	
+	response.then().body("Employee[0].emp_firstname", equalTo("SyntaxAPIInstructor"));
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 
 }
