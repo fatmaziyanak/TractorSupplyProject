@@ -1,7 +1,7 @@
 Feature: Validating Syntax /getOneEmployee.php HRMS API
 Background:
 Given user generates token
-@SyntaxHRMSAPIGET
+@SyntaxHRMSAPIEndToEnd22
 Scenario: Retrieving created employee using /getOneEmployee.php API
 Given user calls getOneEmployee API
 When User retrieves response for getOneEmployee API

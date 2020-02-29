@@ -31,15 +31,16 @@ public class GETOneEmployeeAPISteps {
 	}
 
 	@Then("status code is {int} for getOneEmployee API")
-	public void status_code_is_for_getOneEmployee_API(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+	public void status_code_is_for_getOneEmployee_API(int int1) {
+	
+		response.then().assertThat().statusCode(int1);
+	
+	
 	}
 
 	@Then("user validates created employee exists")
 	public void user_validates_created_employee_exists() {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
 	}
 	
 
