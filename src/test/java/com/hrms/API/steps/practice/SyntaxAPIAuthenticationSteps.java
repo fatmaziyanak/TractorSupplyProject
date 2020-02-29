@@ -5,6 +5,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.*;
 
+import com.hrms.utils.APIConstants;
 import com.hrms.utils.CommonMethods;
 
 public class SyntaxAPIAuthenticationSteps {
@@ -48,27 +49,26 @@ public class SyntaxAPIAuthenticationSteps {
 		 * - you can cancel out
 		 */
 
-		//System.out.println(request.log().all());
+		// System.out.println(request.log().all());
 
 		/**
 		 * Reading JSON File stored in JSONFiles folder using public static readJson()
 		 * method stored in common methods for now -- we will store this common method
-		 * in different location next class then pass path of your generateToken.json file as
-		 * String argument then immediately use .when() to hit generateTokenURI API by
-		 * using post() and then storing into 'response' which returns 'Response'
-		 * (We declared this as a global variable) Please note this is all in one statement
+		 * in different location next class then pass path of your generateToken.json
+		 * file as String argument then immediately use .when() to hit generateTokenURI
+		 * API by using post() and then storing into 'response' which returns 'Response'
+		 * (We declared this as a global variable) Please note this is all in one
+		 * statement
 		 */
 
-		response = request.body(CommonMethods.readJson(
-				"C:\\Users\\Blood of my blood\\git\\HrmsCucumberFramework\\src\\test\\resources\\JSONFiles\\generateToken.json"))
-				.when().post(generateTokenURI);
+		response = request.body(CommonMethods.readJson(APIConstants.GENERATE_TOKEN_JSON)).when().post(generateTokenURI);
 
 		/**
 		 * Using prettyPrint() method so you can see your payload in generateToken.json
 		 * file which was converted to a String in previous step
 		 */
 
-		//System.out.println(response.prettyPrint());
+		// System.out.println(response.prettyPrint());
 
 		/**
 		 * Our JSON payload was converted to a String and stored into 'response' so now
@@ -83,7 +83,7 @@ public class SyntaxAPIAuthenticationSteps {
 		/**
 		 * Printing out stored 'Token'(optional)
 		 */
-		//System.out.println(Token);
+		// System.out.println(Token);
 
 	}
 
