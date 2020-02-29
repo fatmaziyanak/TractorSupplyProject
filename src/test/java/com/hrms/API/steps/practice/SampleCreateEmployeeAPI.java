@@ -17,10 +17,10 @@ import com.hrms.utils.CommonMethods;
  * 
  * 
  * @author API Instructor Please manually import --import static org.hamcrest.Matchers.equalTo;
- *
+ * REFER TO THIS CLASS FOR HELP
  */
 
-public class CreateEmployeeAPI {
+public class SampleCreateEmployeeAPI {
 
 	/**
 	 * Declaring RequestSpecification request & Response response as global
