@@ -7,8 +7,8 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features",
                  glue = {"com.hrms.API.steps.practice"},
-                 dryRun = false,
-                 tags = "@APITEST")
+                 dryRun = true,
+                 tags = "@SyntaxHRMSAPIEndToEnd")
 
 public class APIRunner {
 
