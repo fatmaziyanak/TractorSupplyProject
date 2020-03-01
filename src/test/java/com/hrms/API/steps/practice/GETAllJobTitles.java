@@ -56,9 +56,9 @@ public class GETAllJobTitles {
 			}else if(i==3) {
 				Assert.assertEquals("IT Analyst", array.get(i));
 			}else if(i==4) {
-				Assert.assertEquals("IT Support Manager", array.get(i));
-			}else if(i==5) {
 				Assert.assertEquals("Network Administrator", array.get(i));
+			}else if(i==5) {
+				Assert.assertEquals("IT Support Manager", array.get(i));
 			}else if(i==6) {
 				Assert.assertEquals("Data Quality Manager", array.get(i));
 			}else if(i==7) {
