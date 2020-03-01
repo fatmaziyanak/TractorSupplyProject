@@ -1,7 +1,7 @@
 Feature: Validating Syntax /updateEmployee.php HRMS API
 Background:
 Given user generates token
-@updateEmployee
+@SyntaxHRMSAPIEndToEnd22
 Scenario: Updating created employee using /updateEmployee.php API
 Given user calls updateEmployee API
 When User retrieves response for updateEmployee API
