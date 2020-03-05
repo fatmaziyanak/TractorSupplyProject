@@ -34,6 +34,14 @@ public class JSONDemo {
 		System.out.println(bookType.bookInfo());
 		System.out.println("=========================================================");
 
+		// Get the expensive value as an integer, using get()
+		int expensive1 = j.get("expensive");
+		System.out.println("expensive value as an integer: " + expensive1);
+
+		// Get the expensive value as a String, using getString()
+		String expensive2 = j.getString("expensive");
+		System.out.println("expensive value as an String: " + expensive2);
+
 		// Get the list of Books as a String
 		String books = j.getString("store.book");
 		System.out.println(books);
@@ -81,6 +89,12 @@ public class JSONDemo {
 
 		JSONObject jObject = new JSONObject(storeText);
 
+		// Two different ways to get expensive value, using getInt() and get()
+		int expensive101 = jObject.getInt("expensive");
+		System.out.println("expensive using getInt() is: " + expensive101);
+		int expensive102 = (int) jObject.get("expensive");
+		System.out.println("expensive using get() is: " + expensive102);
+
 		// We are getting the store object inside the whole object
 		JSONObject store = jObject.getJSONObject("store");
 
@@ -99,6 +113,12 @@ public class JSONDemo {
 		// 2.b Getting third book from list using getJSONObject
 		JSONObject book2 = bookList.getJSONObject(2);
 		System.out.println("book -> " + book2);
+
+		// Two different ways to get price value, using getDouble() and get()
+		double price1 = book2.getDouble("price");
+		System.out.println("price using getDouble() is: " + price1);
+		double price2 = (double) book2.get("price");
+		System.out.println("expensive using get() is: " + price2);
 	}
 
 }
