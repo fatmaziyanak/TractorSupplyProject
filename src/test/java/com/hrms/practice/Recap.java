@@ -50,6 +50,5 @@ public class Recap {
 		rset.close();
 		st.close();
 		con.close();
-		
 	}
 }
