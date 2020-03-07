@@ -11,6 +11,8 @@ public class AddEmployeePageElements extends CommonMethods {
 
 	@FindBy(linkText = "PIM")
 	public WebElement PIM;
+	
+	//new changes
 
 	@FindBy(id = "menu_pim_addEmployee")
 	public WebElement addEmp;
