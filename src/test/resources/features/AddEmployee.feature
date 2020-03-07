@@ -6,7 +6,7 @@ Feature: Add Employee
     Given I am logged into HRMS
     And I navigated to Add Employee Page
 
-  @smoke
+  #@smoke
   Scenario: Add new Employee
   When I add "John", "S" and "Smith"
   And I click Save
@@ -56,7 +56,7 @@ Feature: Add Employee
   When I add "James", "John" and "Smith"
   And I click Save
   And I see Employee has been succesfully added
-  Then I collect employe data from database
+  Then I collect employee data from database
   And I verify employee data is matched
     
  
