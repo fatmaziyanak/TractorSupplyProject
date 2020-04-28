@@ -13,6 +13,8 @@ import org.junit.Test;
 public class Recap {
 
 	String dbUrl="jdbc:mysql://18.232.148.34:3306/syntaxhrm_mysql";
+	
+	//String dbUrl2="jdbc:mysql://18.232.148.34:3306/syntax_mysql";
 	String dbUsername = "syntax_hrm";
 	String dbPassword = "syntaxhrm123";
 	

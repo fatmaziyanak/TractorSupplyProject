@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class DbUtils {
 
-	private static Connection conn;
+	protected static Connection conn;
 	private static Statement st;
 	private static ResultSet rset;
 	private static List<Map<String, String>> listData;

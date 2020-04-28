@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 			features = "src/test/resources/features", 
 			glue = {"com.hrms.API.steps.practice" }, 
 			dryRun = false,
-			tags = "@GetAllEmployees")
+			tags = "@SyntaxHRMSAPIEndToEnd22")
 
 public class APIRunner {
 

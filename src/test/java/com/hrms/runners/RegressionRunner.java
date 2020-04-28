@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 		,dryRun=false
 		,plugin= {"pretty", "html:target/html/cucumber-default-report"}
 		,monochrome=true
-		,tags= {"@regression"}
+		,tags= {"@dev"}
 		)
 public class RegressionRunner {
 

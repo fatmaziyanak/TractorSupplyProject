@@ -20,13 +20,15 @@ public class JDBCDemo {
 		System.out.println("Connection is created");
 		Statement st = connection.createStatement();
 		ResultSet rset = st.executeQuery("select * from ohrm_nationality");
-		rset.next();
-		String firstRowData = rset.getString("name");
-		System.out.println(firstRowData);
-		rset.next();
-		String secondRowData = rset.getObject("name").toString();
-		System.out.println(secondRowData);
+//		rset.next();
+//		String firstRowData = rset.getString("name");
+//		System.out.println(firstRowData);
+//		rset.next();
+//		String secondRowData = rset.getObject("name").toString();
+//		System.out.println(secondRowData);
 		String data;
+		
+		System.out.println("************");
 		while (rset.next()) {
 			data = rset.getObject("name").toString();
 			System.out.println(data);

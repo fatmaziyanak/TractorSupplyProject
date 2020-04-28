@@ -51,12 +51,14 @@ Feature: Add Employee
     And I enter  "username","password" and "confirm password"
     When I click Save
     Then I see Employee has been succesfully added
-    
+    @dev
  Scenario: Add Employee and validate database
   When I add "James", "John" and "Smith"
   And I click Save
   And I see Employee has been succesfully added
   Then I collect employee data from database
   And I verify employee data is matched
+  |emp_firstname|emp_lastname|emp_middle_name|
+  |James        |Smith       |John          |
     
  

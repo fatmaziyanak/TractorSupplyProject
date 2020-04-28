@@ -10,6 +10,7 @@ import com.hrms.pages.DashboardPageElement;
 import com.hrms.pages.LoginPageElements;
 import com.hrms.pages.PersonaDetailsPageElements;
 import com.hrms.utils.CommonMethods;
+import com.hrms.utils.GlobalVariables;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -19,7 +20,7 @@ import io.cucumber.datatable.DataTable;
 
 public class AddEmployeeSteps extends CommonMethods {
 
-	String empId;
+//	String empId;
 	
 	@Given("I navigated to Add Employee Page")
 	public void i_navigated_to_Add_Employee_Page() {
@@ -28,10 +29,10 @@ public class AddEmployeeSteps extends CommonMethods {
 	}
 
 	@When("I add {string}, {string} and {string}")
-	public void i_add_and(String FirstName, String MiddleName, String LastName) {
+	public void i_add_and(String FirstName, String MiddleName, String LastName)  {
 	     
 	     add.AddEmployee(FirstName, MiddleName, LastName);
-	     empId=add.empId.getText();
+	   GlobalVariables.empId=add.empId.getAttribute("value");
 	     
 	}
 
@@ -44,7 +45,7 @@ public class AddEmployeeSteps extends CommonMethods {
 	@Then("I see Employee has been succesfully added")
 	public void i_see_Employee_has_been_succesfully_added() {
 	
-		   Assert.assertEquals("Employee is Not being added",person.empId.getText(), empId);
+		   Assert.assertEquals("Employee is Not being added",person.empId.getAttribute("value"), GlobalVariables.empId);
 	}
 
 	@Then("I see Employee with {string}, {string} and {string} is displayed")
@@ -58,14 +59,14 @@ public class AddEmployeeSteps extends CommonMethods {
 	public void i_delete_employee_id() {
 	    
 	    add.empId.clear();
-	     empId=add.empId.getText();
+	     GlobalVariables.empId=add.empId.getAttribute("value");
 	}
 
 	@Then("I see employee without employee id is being added")
 	public void i_see_employee_without_employee_id_is_being_added() {
 	 
-	  empId=person.empId.getText();
-	 Assert.assertEquals("Employee is not being added", person.empId.getText(),empId);
+	 GlobalVariables.empId=person.empId.getText();
+	 Assert.assertEquals("Employee is not being added", person.empId.getAttribute("value"),GlobalVariables.empId);
 	}
 
 	@Then("I see required error message next to the first and last name")
@@ -150,7 +151,18 @@ public class AddEmployeeSteps extends CommonMethods {
 	   // throw new cucumber.api.PendingException();
 	}
 
+
+@Then("I verify employee data is matched")
+public void i_verify_employee_data_is_matched(DataTable dataTable) {
+    //extract data from cucumber datatable
+	List<Map<String, String>> dataListMap=dataTable.asMaps();
 	
+	
+	//System.out.println("dataListMap is "+dataListMap);
+	//System.out.println("dbListMap is "+DbSteps.dbListMap);
+	//need to compare dataListMap to dbListMap
+	Assert.assertTrue(dataListMap.equals(DbSteps.dbListMap));
+}
 	
 	
 	

@@ -41,6 +41,7 @@ public class StoringDataFromDB {
 		System.out.println(listData);
 	}
 
+	
 	@Test
 	public void getAndStoreDataEnhanced() throws SQLException {
 		Connection con = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
