@@ -37,9 +37,7 @@ public class HomePageSteps extends CommonMethods {
 
 		Assert.assertTrue("Welcome Text displayed", home.welcomeText.isDisplayed());
 
-
 	}
-
 
 	@When("I click on search box")
 	public void i_click_on_search_box() throws InterruptedException {
@@ -54,13 +52,7 @@ public class HomePageSteps extends CommonMethods {
 		sendText(home.searchBox, "Multi-Cat Adult Chicken and Fish Formula Dry Cat Food");
 		Assert.assertTrue("Text displayed", home.searchBox.isDisplayed());
 
-		Thread.sleep(5000);
+		// jsClick(home.searchBoxMagnifier);
 
-		jsClick(home.searchBoxMagnifier);
-
-		String str = driver.getCurrentUrl();
-		Thread.sleep(2000);
-		System.out.println(str);
-
-
-	}}
+	}
+}

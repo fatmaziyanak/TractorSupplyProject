@@ -7,28 +7,19 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.hrms.testbase.BaseClass;
 
-public class HomePage extends BaseClass{
-	//public WebElement closeAlertLanding=driver.findElement(By.xpath("//*[local-name()='svg' and @id='closeIconSvg']"));
+public class HomePage extends BaseClass {
 	
-	//public WebElement searchBox=driver.findElement(By.xpath("//input[@name='headerSearch']"));
-	//public WebElement searchBoxMagnifier=driver.findElement(By.xpath("//button[@aria-label='Search']"));
-	
-	@FindBy(xpath="//input[@name='headerSearch']")
+	@FindBy(xpath = "//input[@name='headerSearch']")
 	public WebElement searchBox;
-	
-	@FindBy (xpath="//button[@aria-label='Search']")
+
+	@FindBy(xpath = "//button[@aria-label='Search']")
 	public WebElement searchBoxMagnifier;
-	
-	
-	@FindBy (xpath="//span[contains(text(),'Welcome!')]")
+
+	@FindBy(xpath = "//span[contains(text(),'Welcome!')]")
 	public WebElement welcomeText;
-	
-	
-	
-	
+
 	public HomePage() {
 		PageFactory.initElements(BaseClass.driver, this);
 	}
-	
-	
+
 }
